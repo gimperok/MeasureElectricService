@@ -31,7 +31,7 @@ namespace MeasureElectricApi
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source=ServiceDb.db;");
+            optionsBuilder.UseSqlite(AppSettings.ConnectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
