@@ -17,6 +17,16 @@ namespace MeasureElectricData.Models
         public int Id { get; set; }
 
         /// <summary>
+        /// Наименование объекта потребления
+        /// </summary>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Адресс объекта потребления
+        /// </summary>
+        public string Adress { get; set; }
+
+        /// <summary>
         /// Список точек измерения электроэнергии
         /// </summary>
         public List<ElectricityMeasuringPoint>? ElectricityMeasuringPoints { get; set; } = new List<ElectricityMeasuringPoint>();
