@@ -29,10 +29,6 @@ namespace MeasureElectricApi
         public DbSet<ElMesPointsSettMeters> ElMesPointsSettMeterss { get; set; }
 
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite(AppSettings.ConnectionString);
-        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -82,12 +78,6 @@ namespace MeasureElectricApi
 
                 entity.Property(e => e.Id)
                     .HasColumnName("id");
-
-                entity.Property(e => e.Name)
-                    .HasColumnName("name");
-
-                entity.Property(e => e.Adress)
-                    .HasColumnName("adress");
 
                 entity.HasMany(a => a.ElectricityMeasuringPoints)
                       .WithOne(e => e.ConsumptionObject);
@@ -153,8 +143,6 @@ namespace MeasureElectricApi
             {
                 entity.ToTable("VoltageTransformers");
 
-                entity.HasKey(e => e.ElectricityMeasuringPointId);
-
                 entity.Property(e => e.Type)
                     .HasColumnName("type");
 
@@ -200,6 +188,11 @@ namespace MeasureElectricApi
 
                 entity.HasKey(e => e.Id);
             });
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite(@"Database=ServiceDb;");
         }
     }
 }

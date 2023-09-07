@@ -31,15 +31,5 @@ namespace MeasureElectricData.Models
         /// Прибор учета
         /// </summary>
         public SettlementMeter? SettlementMeter { get; set; }
-
-        /// <summary>
-        /// Дата начала замера
-        /// </summary>
-        public DateTime DateStart { get; set; }
-
-        /// <summary>
-        /// Дата окончания замера
-        /// </summary>
-        public DateTime DateFinish { get; set; }
     }
 }

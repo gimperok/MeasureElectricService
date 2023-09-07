@@ -22,9 +22,9 @@ namespace MeasureElectricData.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// Адресс объекта потребления
+        /// Адрес объекта потребления 
         /// </summary>
-        public string Adress { get; set; }
+        public int Adress { get; set; }
 
         /// <summary>
         /// Список точек измерения электроэнергии

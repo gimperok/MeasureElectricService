@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace MeasureElectricApi.DBService.Implementations
 {
@@ -27,7 +28,6 @@ namespace MeasureElectricApi.DBService.Implementations
             try
             {
                 subCompanyFromDb = db.SubCompanies.FirstOrDefault(u => u.Id == id);
-
             }
             catch (Exception e)
             {

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MeasureElectricApi</name>
+    </assembly>
+    <members>
+        <member name="M:MeasureElectricApi.Controllers.CompanyController.GetCompanyById(System.Int32)">
+            <summary>
+            Получить организацию по ее id
+            </summary>
+            <param name="id">Идентификатор организации</param>
+            <returns>Объект организации</returns>
+        </member>
+        <member name="M:MeasureElectricApi.Controllers.CompanyController.AddCompany(MeasureElectricData.Models.Company)">
+            <summary>
+            Добавить организацию
+            </summary>
+            <param name="company">Обьект организации</param>
+        </member>
+        <member name="M:MeasureElectricApi.Controllers.ConsumptionObjectController.GetConsumptionObjectById(System.Int32)">
+            <summary>
+            Получить объект потребления по его id
+            </summary>
+            <param name="id">Идентификатор объекта потребления</param>
+            <returns>Объект потребления</returns>
+        </member>
+        <member name="M:MeasureElectricApi.Controllers.ConsumptionObjectController.AddConsumptionObject(MeasureElectricData.Models.ConsumptionObject,System.Int32)">
+             <summary>
+             Добавить объект потребления
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 {
+                    "name" : "ООО Комп1",
+                    "adress" : "г.Москва"
+                 }
+            
+             </remarks>
+             <param name="consumptionObject">Обьект потребления</param>
+             <param name="subCompanyId">Идентификатор дочерней организации</param>
+        </member>
+        <member name="M:MeasureElectricApi.Controllers.DeadCountersController.GetDeadElectricalEnergyCounters(System.DateTime)">
+            <summary>
+            Получить cчетчики электрической энергии с вышедшим сроком поверки
+            </summary>
+            <param name="date">Предельная дата</param>
+            <returns>Список счетчиков электрической энергии с вышедшим сроком поверки</returns>
+        </member>
+        <member name="M:MeasureElectricApi.Controllers.DeadCountersController.GetDeadVoltageTransformerCounters(System.DateTime)">
+            <summary>
+            Получить трансформатор напряжения с вышедшим сроком поверки
+            </summary>
+            <param name="date">Предельная дата</param>
+            <returns>Список трансформаторов напряжения с вышедшим сроком поверки</returns>
+        </member>
+        <member name="M:MeasureElectricApi.Controllers.DeadCountersController.GetDeadCurrentTransformerCounters(System.DateTime)">
+            <summary>
+            Получить список трансформаторов тока с вышедшим сроком поверки
+            </summary>
+            <param name="date">Предельная дата</param>
+            <returns>Список трансформаторов тока с вышедшим сроком поверки</returns>
+        </member>
+        <member name="M:MeasureElectricApi.Controllers.ElectricityMeasuringPointController.GetElectricityMeasuringPointById(System.Int32)">
+            <summary>
+            Получить точку измерения электроэнергии по ее id
+            </summary>
+            <param name="id">Идентификатор точки измерения электроэнергии</param>
+            <returns>Объект точки измерения электроэнергии</returns>
+        </member>
+        <member name="M:MeasureElectricApi.Controllers.ElectricityMeasuringPointController.AddElectricityMeasuringPoint(MeasureElectricData.Models.ElectricityMeasuringPoint,System.Int32,System.String,System.DateTime,System.String,System.DateTime,System.Double,System.String,System.DateTime,System.Double)">
+            <summary>
+            Добавить точку измерения электроэнергии
+            </summary>
+            <param name="electricityMeasuringPoint">Объект точки измерения электроэнергии</param>
+            <param name="consumptionObjectId">Идентификатор объекта потребления</param>
+            <param name="typeCounter">11</param>
+            <param name="verDateCounter">22</param>
+            <param name="typeCurTransform"></param>
+            <param name="verDateCurTransform"></param>
+            <param name="ktt"></param>
+            <param name="typeVoltTransform"></param>
+            <param name="verDateVoltTransform"></param>
+            <param name="ktn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MeasureElectricApi.Controllers.SubCompanyController.GetSubCompanyById(System.Int32)">
+            <summary>
+            Получить дочернюю организацию по ее id
+            </summary>
+            <param name="id">Идентификатор дочерней организации</param>
+            <returns>Объект дочерней организации</returns>
+        </member>
+        <member name="M:MeasureElectricApi.Controllers.SubCompanyController.AddSubCompany(MeasureElectricData.Models.SubCompany,System.Int32)">
+             <summary>
+             Добавить дочернюю организацию
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 {
+                    "name" : "ООО Комп1",
+                    "adress" : "г.Москва"
+                 }
+            
+             </remarks>
+             <param name="subCompany">Обьект дочерней организации</param>
+             <param name="companyId">Идентификатор главной организации</param>
+        </member>
+    </members>
+</doc>
