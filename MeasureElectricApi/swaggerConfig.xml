@@ -101,6 +101,22 @@
              <param name="ktn"></param>
              <returns>Идентификатор добавленной точки измерения электроэнергии</returns>
         </member>
+        <member name="M:MeasureElectricApi.Controllers.ElectricitySupplyPointController.GetElectricitySupplyPointById(System.Int32)">
+            <summary>
+            Получить точку поставки электроэнергии по ее id
+            </summary>
+            <param name="id">Идентификатор точки поставки электроэнергии</param>
+            <returns>Объект точки поставки электроэнергии</returns>
+        </member>
+        <member name="M:MeasureElectricApi.Controllers.ElectricitySupplyPointController.Add(MeasureElectricData.Models.ElectricitySupplyPoint,System.Int32,System.Boolean)">
+            <summary>
+            Добавить точку поставки электроэнергии
+            </summary>
+            <param name="elSupPoint">Объект точки поставки электроэнергии</param>
+            <param name="consumptionObjectId">Идентификатор объекта потребления</param>
+            <param name="isSettlementMeter">Наличие расчетного прибора</param>
+            <returns>Идентификатор добавленной точки поставки электроэнергии</returns>
+        </member>
         <member name="M:MeasureElectricApi.Controllers.SubCompanyController.GetSubCompanyById(System.Int32)">
             <summary>
             Получить дочернюю организацию по ее id
