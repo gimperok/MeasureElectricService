@@ -39,7 +39,7 @@ namespace MeasureElectricApi.DBService.Implementations
         }
 
 
-        public int Add(ElectricityMeasuringPoint entity, int consumptionObjectId,
+        public int Add(ElectricityMeasuringPoint entity, int consumptionObjectId,  //Здесь можно было бы передавать сами объекты счетчиков
                                                     string typeCounter, DateTime verDateCounter,
                                                     string typeCurTransform, DateTime verDateCurTransform, double ktt,
                                                     string typeVoltTransform, DateTime verDateVoltTransform, double ktn)

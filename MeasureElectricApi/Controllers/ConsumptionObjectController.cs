@@ -34,7 +34,7 @@ namespace MeasureElectricApi.Controllers
         /// Пример запроса:
         ///
         ///     {
-        ///        "name" : "ООО Комп1",
+        ///        "name" : "Объект1",
         ///        "adress" : "г.Москва"
         ///     }
         ///

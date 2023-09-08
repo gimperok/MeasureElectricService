@@ -30,6 +30,15 @@ namespace MeasureElectricApi.Controllers
         /// <summary>
         /// Добавить организацию
         /// </summary>
+        /// <remarks>
+        /// Пример запроса:
+        ///
+        ///     {
+        ///        "name" : "Компания1",
+        ///        "adress" : "г.Москва"
+        ///     }
+        ///
+        /// </remarks>
         /// <param name="company">Обьект организации</param>
         [HttpPost]
         public int AddCompany(Company company)

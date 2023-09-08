@@ -33,7 +33,14 @@ namespace MeasureElectricApi.Controllers
         /// <summary>
         /// Добавить точку измерения электроэнергии
         /// </summary>
-
+        /// <remarks>
+        /// Пример запроса:
+        ///
+        ///     {
+        ///        "name" : "Точка1",
+        ///     }
+        ///
+        /// </remarks>
         /// <param name="electricityMeasuringPoint">Объект точки измерения электроэнергии</param>
         /// <param name="consumptionObjectId">Идентификатор объекта потребления</param>
         /// <param name="typeCounter">11</param>
@@ -44,9 +51,9 @@ namespace MeasureElectricApi.Controllers
         /// <param name="typeVoltTransform"></param>
         /// <param name="verDateVoltTransform"></param>
         /// <param name="ktn"></param>
-        /// <returns></returns>
+        /// <returns>Идентификатор добавленной точки измерения электроэнергии</returns>
         [HttpPost]
-        public int AddElectricityMeasuringPoint([FromBody] ElectricityMeasuringPoint electricityMeasuringPoint, int consumptionObjectId,
+        public int AddElectricityMeasuringPoint(ElectricityMeasuringPoint electricityMeasuringPoint, int consumptionObjectId,
                                                     string typeCounter, DateTime verDateCounter,
                                                     string typeCurTransform, DateTime verDateCurTransform, double ktt,
                                                     string typeVoltTransform, DateTime verDateVoltTransform, double ktn)

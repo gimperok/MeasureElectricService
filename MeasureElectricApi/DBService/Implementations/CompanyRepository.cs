@@ -29,9 +29,6 @@ namespace MeasureElectricApi.DBService.Implementations
             try
             {
                 companyFromDb = db.Companies.FirstOrDefault(u => u.Id == id);
-                //companyFromDb.SubCompanies = db.SubCompanies.Where(s => s.CompanyId == companyFromDb.Id).ToList();
-
-                //companyFromDb = db.Companies.Include(c => c.SubCompanies).ToList();
             }
             catch (Exception e)
             {

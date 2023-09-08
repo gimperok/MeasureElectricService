@@ -12,10 +12,19 @@
             <returns>Объект организации</returns>
         </member>
         <member name="M:MeasureElectricApi.Controllers.CompanyController.AddCompany(MeasureElectricData.Models.Company)">
-            <summary>
-            Добавить организацию
-            </summary>
-            <param name="company">Обьект организации</param>
+             <summary>
+             Добавить организацию
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 {
+                    "name" : "Компания1",
+                    "adress" : "г.Москва"
+                 }
+            
+             </remarks>
+             <param name="company">Обьект организации</param>
         </member>
         <member name="M:MeasureElectricApi.Controllers.ConsumptionObjectController.GetConsumptionObjectById(System.Int32)">
             <summary>
@@ -32,7 +41,7 @@
              Пример запроса:
             
                  {
-                    "name" : "ООО Комп1",
+                    "name" : "Объект1",
                     "adress" : "г.Москва"
                  }
             
@@ -69,20 +78,28 @@
             <returns>Объект точки измерения электроэнергии</returns>
         </member>
         <member name="M:MeasureElectricApi.Controllers.ElectricityMeasuringPointController.AddElectricityMeasuringPoint(MeasureElectricData.Models.ElectricityMeasuringPoint,System.Int32,System.String,System.DateTime,System.String,System.DateTime,System.Double,System.String,System.DateTime,System.Double)">
-            <summary>
-            Добавить точку измерения электроэнергии
-            </summary>
-            <param name="electricityMeasuringPoint">Объект точки измерения электроэнергии</param>
-            <param name="consumptionObjectId">Идентификатор объекта потребления</param>
-            <param name="typeCounter">11</param>
-            <param name="verDateCounter">22</param>
-            <param name="typeCurTransform"></param>
-            <param name="verDateCurTransform"></param>
-            <param name="ktt"></param>
-            <param name="typeVoltTransform"></param>
-            <param name="verDateVoltTransform"></param>
-            <param name="ktn"></param>
-            <returns></returns>
+             <summary>
+             Добавить точку измерения электроэнергии
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 {
+                    "name" : "Точка1",
+                 }
+            
+             </remarks>
+             <param name="electricityMeasuringPoint">Объект точки измерения электроэнергии</param>
+             <param name="consumptionObjectId">Идентификатор объекта потребления</param>
+             <param name="typeCounter">11</param>
+             <param name="verDateCounter">22</param>
+             <param name="typeCurTransform"></param>
+             <param name="verDateCurTransform"></param>
+             <param name="ktt"></param>
+             <param name="typeVoltTransform"></param>
+             <param name="verDateVoltTransform"></param>
+             <param name="ktn"></param>
+             <returns>Идентификатор добавленной точки измерения электроэнергии</returns>
         </member>
         <member name="M:MeasureElectricApi.Controllers.SubCompanyController.GetSubCompanyById(System.Int32)">
             <summary>
@@ -99,8 +116,8 @@
              Пример запроса:
             
                  {
-                    "name" : "ООО Комп1",
-                    "adress" : "г.Москва"
+                    "name" : "ООО дочерняя Комп1",
+                    "adress" : "Адрес1"
                  }
             
              </remarks>
